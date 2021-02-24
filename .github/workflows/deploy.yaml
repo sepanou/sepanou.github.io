@@ -40,7 +40,7 @@ jobs:
           fetch-depth: 1
 
       - name: Move compiled CSS to path within pr-pages branch
-        run: cp -fv /tmp/website/* .
+        run: cp -rfv /tmp/website/* .
 
       - name: Add and Commit changes to pr-pages branch
         run: |
