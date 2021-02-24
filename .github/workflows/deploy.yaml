@@ -21,8 +21,8 @@ jobs:
             assets/sass/main.scss
             assets/sass/noscript.scss
           destination: |
-            /tmp/website/assets/css/main.css
-            /tmp/website/assets/css/noscript.css
+            assets/css/main.css
+            assets/css/noscript.css
 
       - name: Make destination directory for compiled version
         run: mkdir -vp /tmp/website
