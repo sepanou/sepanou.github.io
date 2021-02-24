@@ -34,7 +34,7 @@ jobs:
           fetch-depth: 1
 
       - name: Move compiled CSS to path within pr-pages branch
-        run: mv -f /tmp/website/assets/css/* assets/css/*
+        run: mv /tmp/website/assets/css/* assets/css/
 
       - name: Add and Commit changes to pr-pages branch
         run: |
