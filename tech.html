@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technologies - Sépanou</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <a href="index.html" class="logo">
+          <strong>Sépanou</strong> <span>Projet S2 - EPITA</span>
+        </a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="team.html">L'Équipe</a></li>
+          <li><a href="tech.html">Technologies</a></li>
+          <li><a href="elements.html">On verra...</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li>
+            <a
+              href="https://github.com/sepanou/"
+              target="_blank"
+              class="button primary fit"
+              >GitHub</a
+            >
+          </li>
+          <!-- <li><a href="#" class="button fit">Log In</a></li> -->
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h1>Technologies</h1>
+            </header>
+            <h2>Coeur principal</h2>
+            <p>
+              Les buts et intérêts de ce projet en tant que groupe sont de
+              découvrir l’univers de la création de jeux vidéo sous Unity ainsi
+              que la dimension multijoueur des jeux accompagnés de leurs
+              problématiques et particularités. Ainsi, nous allons pouvoir
+              découvrir en détail les aspects du genre rogue-like ainsi que les
+              aspects du travail en groupe en utilisant des plateformes adaptées
+              tel que GitHub pour pouvoir mettre le travail en commun assez
+              facilement.
+            </p>
+            <h2>Réseau</h2>
+            <p>
+              Pour gérer le réseau, nous avons décidé d'utiliser la librairie
+              Mirror au lieu de recoder à la main tous les outils. Le jeu étant
+              voué à être multijoueur, même si un mode solo sera disponible, il
+              y a deux entités séparées :
+            </p>
+            <ul>
+              <li>
+                Le client : Il sera chargé d’afficher le monde et interpréter
+                les actions du joueur sur l’ordinateur avant de les envoyer vers
+                le serveur. Il sert do ncd’interface entre le serveur et le
+                joueur.
+              </li>
+              <li>
+                Le serveur : Il sera chargé de générer le monde, sauvegarder les
+                parties des joueurs, interconnecter les joueurs lors des
+                sessions multijoueur et c’est lui qui gère la logique et le
+                fonctionnement du jeu.
+              </li>
+            </ul>
+            <p>
+              Lors des sessions solo, un serveur local est lancé sur
+              l’ordinateur du joueur afin de garder la même base de code entre
+              le mode solo et le mode multijoueur.Ces deux entités communiquent
+              entre elles en réseau, et s’échangent des données en continu
+              pendant toute la partie.
+            </p>
+            <h2>L'intelligence artificelle</h2>
+            <p>
+              Les rogue-like étant par nature des jeux en JVE (joueur(s) contre
+              ennemies), il nous faut développer des comportements pour les
+              ennemis et éventuels alliés du joueur. Il nous faut par exemple
+              programmer des algorithmes de pathfinding ou encore des motifs de
+              déplacement et d’attaque des ennemis. En effet, chaque ennemi aura
+              des comportements différents selon la présence duou des joueurs et
+              de la situation actuelle. Certains comportements pouvant être
+              réadaptés au besoin d’autres ennemis dans des niveaux à thèmes
+              différents. Deplus, les boss auront leur propre IA unique à leur
+              environnement et spécificités.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>
+              &copy;
+              <a href="https://www.tchekda.fr" target="_blank">David T.</a>
+            </li>
+            <li>
+              Design: <a target="_blank" href="https://html5up.net">HTML5 UP</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
