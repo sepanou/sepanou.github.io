@@ -8,9 +8,14 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/sepanou/Installer/main/icon.ico"
+      type="image/x-icon"
+    />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
@@ -72,7 +77,7 @@
         <section id="one">
           <div class="inner">
             <header class="major">
-              <h2>Terres de l'Éxil</h2>
+              <h2>Terres de l'Éxil <span id="game-title"></span></h2>
             </header>
             <p>
               Il s’agit d’un jeu fortement inspiré du rogue-like. Par
@@ -123,7 +128,7 @@
             </span>
             <header class="major">
               <h3><a href="tech.html" class="link">Technologies</a></h3>
-              <p>Comment y sommes-nous arrivé ?</p>
+              <p>Comment y sommes-nous arrivés ?</p>
             </header>
           </article>
           <article>
@@ -154,6 +159,9 @@
               <a href="https://www.tchekda.fr" target="_blank">David T.</a>
             </li>
             <li>
+              <a target="_blank" href="/assets/credits.csv">Crédits du jeu</a>
+            </li>
+            <li>
               Design: <a target="_blank" href="https://html5up.net">HTML5 UP</a>
             </li>
           </ul>
@@ -169,5 +177,13 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      $.ajax({
+        url: "https://api.github.com/repos/sepanou/UnityProject/releases/latest",
+        context: document.body,
+      }).done(function (data) {
+        $("#game-title").text(data.tag_name);
+      });
+    </script>
   </body>
 </html>
